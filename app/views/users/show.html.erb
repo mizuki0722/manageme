@@ -1,0 +1,67 @@
+<h1 class="mypage-title">My Page</h1>
+
+<div class="user-profile-card">
+  <% if @user.avatar.attached? %>
+    <%= image_tag url_for(@user.avatar), class: "user-icon" %>
+  <% else %>
+    <%= image_tag "defalut_avatar.png", class: "user-icon" %>
+  <% end %>
+
+  <p><strong>名前：</strong><%= @user.name %></p>
+  <p><strong>メール：</strong><%= @user.email %></p>
+  <p><strong>プロフィール：</strong><%= @user.profile %></p>
+
+  <% if current_user.id == @user.id %>
+    <%= link_to "編集する", edit_user_registration_path, class: "btn-edit-profile" %>
+  <% end %>
+</div>
+
+<div class="mypage-links">
+ 
+  <%= link_to "My calendar", user_blogs_path(@user), class: "btn-link" %>
+</div>
+<div class="back-button">
+  <%= link_to "🔙", diets_path, class: "btn-link" %>
+</div>
+
+<h2 class="mypage-subtitle">投稿一覧</h2>
+
+<% @user.diets.each do |t| %>
+  <div class="mypage-post-card">
+    <p><strong>📅 投稿日：</strong><%= t.created_at.strftime('%Y/%m/%d') %></p>
+    <p><strong>📝 タイトル：</strong><%= t.name %></p>
+
+    <% if t.image.attached? %>
+      <div class="diet-image">
+        <%= image_tag url_for(t.image) %>
+      </div>
+    <% end %>
+
+    <p><strong>🧾 内容：</strong><%= t.about %></p>
+
+    <!-- ボタン部分もここに入れる -->
+    <div class="diet-actions">
+      <% if user_signed_in? %>
+        <% like = current_user.likes.find_by(diet_id: t.id) %>
+        <% if like %>
+          <%= link_to diet_like_path(t, like), data: { turbo_method: :delete } do %>
+            ❤️ <%= t.likes.count %>
+          <% end %>
+        <% else %>
+          <%= link_to diet_likes_path(t), data: { turbo_method: :post } do %>
+            🤍 <%= t.likes.count %>
+          <% end %>
+        <% end %>
+      <% else %>
+        🤍 <%= t.likes.count %>
+      <% end %>
+
+      <%= link_to "詳細へ", diet_path(t.id), class: "btn-detail" %>
+      <% if user_signed_in? && current_user.id == t.user_id %>
+        <%= link_to "編集", edit_diet_path(t.id), class: "btn-edit" %>
+         <%= button_to "削除", diet_path(t.id), method: :delete, class: "btn-delete", form: { style: "display:inline;" } %>
+          
+      <% end %>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,188 @@
+.custom-blog-form {
+  max-width: 520px;
+  margin: 50px auto;
+  background: linear-gradient(135deg, #fff8dc, #fff0a5);
+  padding: 40px 35px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(251, 192, 45, 0.4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #5a4200;
+}
+
+.form-title {
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #f4a300;
+  text-shadow: 1px 1px 2px #c07b00;
+}
+
+.form-group {
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.form-label {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  display: block;
+  color: #a06b00;
+  letter-spacing: 0.05em;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  pointer-events: none;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 40px 12px 40px;
+  border: 2.5px solid #f4d35e;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  color: #4a3e00;
+  background: #fffde7;
+  box-shadow: inset 0 2px 4px #f4d35e88;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #ffbf00;
+  box-shadow: 0 0 8px 3px #ffbf0088;
+  outline: none;
+}
+
+.datetime-wrapper select {
+  margin-right: 6px;
+  padding: 8px 10px;
+  border-radius: 15px;
+  border: 2px solid #f4d35e;
+  background: #fffde7;
+  font-size: 1rem;
+  color: #4a3e00;
+  box-shadow: inset 0 2px 4px #f4d35e88;
+  transition: border-color 0.3s ease;
+}
+
+.datetime-wrapper select:focus {
+  border-color: #ffbf00;
+  outline: none;
+  box-shadow: 0 0 8px 3px #ffbf0088;
+}
+
+.form-submit {
+  text-align: center;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #ffca28, #f9a825);
+  border: none;
+  border-radius: 40px;
+  color: white;
+  font-weight: 900;
+  font-size: 1.3rem;
+  padding: 14px 52px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(251, 192, 45, 0.7);
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #f9a825, #ffca28);
+  box-shadow: 0 12px 30px rgba(251, 192, 45, 0.9);
+}
+.submit-button {
+  background: linear-gradient(135deg, #ffca28, #f9a825);
+  border: none;
+  border-radius: 40px;
+  color: white;
+  font-weight: 900;
+  font-size: 1.3rem;
+  padding: 14px 52px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(251, 192, 45, 0.7);
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #f9a825, #ffca28);
+  box-shadow: 0 12px 30px rgba(251, 192, 45, 0.9);
+}
+.submit-button {
+  background: linear-gradient(135deg, #ffca28, #f9a825);
+  border: none;
+  border-radius: 40px;
+  color: white;
+  font-weight: 900;
+  font-size: 1.3rem;
+  padding: 14px 52px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(251, 192, 45, 0.7);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 20%, transparent 70%);
+  transform: translateX(-100%) translateY(-100%);
+  transition: transform 0.7s ease;
+  pointer-events: none;
+  border-radius: 40px;
+}
+
+.submit-button:hover::before {
+  transform: translateX(100%) translateY(100%);
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #f9a825, #ffca28);
+  box-shadow: 0 12px 30px rgba(251, 192, 45, 0.9);
+}
+
+.submit-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 6px 15px rgba(251, 192, 45, 0.6);
+}
+.submit-button {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 14px 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 154, 158, 0.7);
+  transition: all 0.3s ease;
+  font-family: 'Comic Sans MS', 'Segoe UI', cursive, sans-serif;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #fad0c4 0%, #ff9a9e 100%);
+  box-shadow: 0 10px 25px rgba(250, 208, 196, 0.9);
+  transform: scale(1.05);
+}
+
+.submit-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 12px rgba(255, 154, 158, 0.5);
+}

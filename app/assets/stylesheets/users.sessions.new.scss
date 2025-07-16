@@ -1,0 +1,89 @@
+/* ログインフォーム全体のスタイル */
+.login-form-wrapper {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px 40px;
+  background: #fff9e6; /* 優しいクリーム色 */
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(251, 192, 45, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #5a4200;
+}
+
+/* タイトル */
+.login-form-wrapper h2 {
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 2.5rem;
+  color: #f4a300;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px #c07b00;
+}
+
+/* ラベル */
+.login-form-wrapper label {
+  display: block;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: #a06b00;
+}
+
+/* 入力フィールド */
+.login-form-wrapper input[type="email"],
+.login-form-wrapper input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2.5px solid #f4d35e;
+  border-radius: 16px;
+  font-size: 1rem;
+  background: #fffde7;
+  box-shadow: inset 0 2px 5px rgba(244, 211, 94, 0.6);
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.login-form-wrapper input[type="email"]:focus,
+.login-form-wrapper input[type="password"]:focus {
+  border-color: #ffbf00;
+  outline: none;
+  box-shadow: 0 0 8px 3px #ffbf0088;
+}
+
+/* チェックボックスとラベル */
+.login-form-wrapper .remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 25px;
+  color: #8c6c00;
+  font-weight: 600;
+}
+
+/* 送信ボタン */
+.login-form-wrapper input[type="submit"] {
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 154, 158, 0.7);
+  transition: all 0.3s ease;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+.login-form-wrapper input[type="submit"]:hover {
+  background: linear-gradient(135deg, #fad0c4 0%, #ff9a9e 100%);
+  box-shadow: 0 10px 25px rgba(250, 208, 196, 0.9);
+  transform: scale(1.05);
+}
+
+.login-form-wrapper input[type="submit"]:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 12px rgba(255, 154, 158, 0.5);
+}

@@ -1,0 +1,69 @@
+<%= link_to new_diet_path, class: "floating-post-button" do %>
+  <i class="fas fa-plus"></i>
+<% end %>
+
+<div class="timeline-container">
+  <div class="timeline-main">
+
+    <% if user_signed_in? %>
+      <%= link_to user_path(current_user.id), class: "mypage-button" do %>
+        <i class="fas fa-user-circle"></i> mypage
+      <% end %>
+    <% end %>
+
+    <div class="search-form">
+      <%= form_with(url: root_path, method: :get, local: true) do |f| %>
+        <%= f.text_field :search, placeholder: "キーワードを入力" %>
+        <%= f.submit "検索する" %>
+      <% end %>
+    </div>
+
+    <% @diets.each do |t| %>
+      <div class="diet-card">
+        <div class="diet-header">
+          <p><strong>👤 投稿者：</strong><%= t.user.present? ? t.user.name : "退会ユーザー" %></p>
+          <p><strong>📌 タイトル：</strong><%= t.name %></p>
+        </div>
+
+        <% if t.image.attached? %>
+          <div class="diet-image">
+            <%= image_tag t.image %>
+          </div>
+        <% end %>
+
+        <div class="diet-body">
+          <p><strong>📋 内容：</strong><%= t.about %></p>
+        </div>
+
+        <div class="diet-actions">
+          <% if user_signed_in? %>
+            <% like = current_user.likes.find_by(diet_id: t.id) %>
+            <% if like %>
+              <%= link_to diet_like_path(t, like), data: { turbo_method: :delete } do %>
+                ❤️ <%= t.likes.count %>
+              <% end %>
+            <% else %>
+              <%= link_to diet_likes_path(t), data: { turbo_method: :post } do %>
+                🤍 <%= t.likes.count %>
+              <% end %>
+            <% end %>
+          <% else %>
+            🤍 <%= t.likes.count %>
+          <% end %>
+
+        <%= link_to "詳細へ", diet_path(t.id), class: "btn-detail" %>
+       <% if user_signed_in? && current_user.id == t.user_id %>
+         <%= link_to "編集", edit_diet_path(t.id), class: "btn-edit" %>
+       <%= button_to "削除", diet_path(t.id), method: :delete, class: "btn-delete", form: { style: "display:inline;" } %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
+
+
+
+

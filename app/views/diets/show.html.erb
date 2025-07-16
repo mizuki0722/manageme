@@ -1,0 +1,82 @@
+
+<% if @diet.image.attached? %>
+  <%= image_tag url_for(@diet.image), class: "diet-image" %>
+<% else %>
+  <p>画像は登録されていません</p>
+<% end %>
+<h3 class="post-detail-title">投稿詳細</h3>
+<div class="post-detail-card">
+  <div class="post-detail-item">
+    <span class="label">タイトル</span>
+    <p class="content"><%= @diet.name %></p>
+  </div>
+  <div class="post-detail-item">
+    <span class="label">内容</span>
+    <p class="content"><%= @diet.about %></p>
+  </div>
+  <div class="post-detail-item">
+    <span class="label">投稿日</span>
+    <p class="content"><%= @diet.created_at.strftime("%Y/%m/%d") %></p>
+  </div>
+</div>
+
+  
+  <% if user_signed_in? %>
+  <% if current_user.already_liked?(@diet) %>
+    <%= link_to diet_like_path(id: @diet.id, diet_id: @diet.id), data: { turbo_method: :delete } do %>
+ <i class="fas fa-heart"></i><%= @diet.likes.count %>
+    <% end %>
+  <% else %>
+    <%= link_to diet_likes_path(id: @diet.id, diet_id: @diet.id), data: { turbo_method: :post }  do %>
+      <i class="far fa-heart"></i><%= @diet.likes.count %>
+    <% end %>
+  <% end %>
+<% else %>
+<i class="far fa-heart"></i><%= @diet.likes.count %>
+<% end %>
+
+
+</div>
+<h2>いいねしたユーザー</h2>
+<div class="liked-users-wrapper">
+  <% @diet.liked_users.each do |user| %>
+    <div class="liked-user">
+      <% if user.avatar.attached? %>
+        <%= image_tag url_for(user.avatar), alt: user.name, class: "liked-user-avatar" %>
+      <% else %>
+        <%= image_tag "default_avatar.png", alt: "デフォルトアバター", class: "liked-user-avatar" %>
+      <% end %>
+      <p><%= user.name %></p>
+    </div>
+  <% end %>
+</div>
+
+
+
+  <div class="comment-wrapper">
+<% @comments.each_with_index do |c, i| %>
+  <div class="comment-bubble <%= i.even? ? 'left' : 'right' %>">
+    <strong><%= c.user.name unless c.user.blank? %></strong><br>
+    <%= c.content %>
+  </div>
+<% end %>
+
+
+  <% if user_signed_in? %>
+    <%= form_with(model: [@diet, @comment], local: true) do |f| %>
+      <%= f.text_area :content %>
+      <%= button_tag type: "submit" do %>
+        <i class="far fa-comments"></i> コメントする
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
+
+<div class="back-button">
+  <%= link_to "🔙", diets_path, class: "btn-link" %>
+</div>
+
+<% if user_signed_in? && current_user.id == @diet.user_id %>
+  <%= link_to "編集する", edit_diet_path(@diet.id), class: "edit-button" %>
+<% end %>

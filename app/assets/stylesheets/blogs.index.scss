@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=DM+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+/* カレンダー全体 */
+.month-calendar {
+  width: 100%;
+  max-width: 760px;
+  margin: 50px auto;
+  border-radius: 30px;
+  border: 4px dashed #ffcc80;
+  background: linear-gradient(135deg, #fffdf2, #fff7e0);
+  box-shadow: 8px 8px 0 #ffe0b2;
+  font-family: 'Quicksand', sans-serif;
+  padding: 18px;
+  border-collapse: separate;
+  border-spacing: 16px;
+}
+
+/* 曜日ヘッダー */
+.month-calendar thead th {
+  background: #ffe082;
+  color: #5d4037;
+  font-weight: bold;
+  padding: 16px 0;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  box-shadow: 2px 2px 6px rgba(255, 152, 0, 0.2);
+  letter-spacing: 1px;
+  font-family: 'Bangers', cursive;
+  text-shadow: 1px 1px #fff8e1;
+}
+
+/* 日付セル */
+.month-calendar tbody td {
+  background: #fff9db;
+  border-radius: 18px;
+  padding: 18px 14px;
+  box-shadow:
+    2px 2px 6px rgba(255, 183, 77, 0.2),
+    inset 0 0 8px rgba(255, 235, 168, 0.25);
+  border: 2px dotted #ffe082;
+  vertical-align: top;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  position: relative;
+}
+
+/* ホバー効果 */
+.month-calendar tbody td:hover {
+  background: #fff3bc;
+  transform: translateY(-4px) scale(1.03) rotate(-0.5deg);
+  box-shadow:
+    4px 6px 10px rgba(255, 183, 77, 0.3),
+    inset 0 0 10px rgba(255, 233, 160, 0.5);
+  z-index: 5;
+}
+
+/* 日付表示バッジ */
+.date-number {
+  background: #ffd54f;
+  color: #5d4037;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin-bottom: 12px;
+  box-shadow: 1px 2px 4px rgba(255, 183, 77, 0.4);
+  font-family: 'Bangers', cursive;
+}
+
+/* ブログリンク */
+.blog-item {
+  margin-top: 10px;
+}
+
+.blog-link {
+  display: block;
+  background: linear-gradient(45deg, #ff8a65, #ffb74d);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  box-shadow: 2px 4px 10px rgba(255, 111, 97, 0.4);
+  transition: all 0.25s ease;
+}
+
+.blog-link:hover {
+  background: #ff7043;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 3px 6px 12px rgba(255, 87, 34, 0.5);
+}
+
+/* タイトル */
+.page-title {
+  font-size: 2.6rem;
+  color: #ff7043;
+  text-shadow: 1px 1px 0 #ffe0b2;
+  margin: 40px auto 30px auto;
+  text-align: center;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 2px;
+}
+
+/* ホームボタン（🏠） - コンパクト版 */
+.home-button .btn-icon {
+  background: #ff8a80;
+  color: white;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 22px;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 0 #ffd180;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+.home-button .btn-icon:hover {
+  background: #f06292;
+}
+
+/* 記録ボタン（✍️） - コンパクト版 */
+.btn-record {
+  background: linear-gradient(45deg, #ffb347, #ff8c42);
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 18px;
+  border-radius: 20px;
+  box-shadow: 0 3px 7px rgba(255, 111, 97, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  user-select: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-record:hover {
+  background: #ff944d;
+}
+
+/* 絵文字はテキスト内にそのまま置いてOK */
+.action-links {
+  text-align: center;  /* テキストやインライン要素を中央に */
+  margin-top: 20px;    /* 上の余白も少し追加 */
+}
+

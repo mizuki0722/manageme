@@ -1,0 +1,65 @@
+.edit-diet-form {
+  max-width: 540px;
+  margin: 40px auto;
+  padding: 32px;
+  background-color: #fffdf6; /* ほんのり黄色ベージュ */
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(255, 204, 0, 0.1);
+  font-family: 'Noto Sans JP', 'Helvetica Neue', sans-serif;
+  color: #5c4931;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  font-weight: 600;
+  color: #e6a400; /* 明るめのゴールド */
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #ffefc2;
+  border-radius: 12px;
+  background-color: #fffefa;
+  color: #333;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #ffe066;
+  box-shadow: 0 0 6px rgba(255, 214, 0, 0.4);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-submit {
+  background-color: #ffe066;
+  color: #5c4931;
+  font-weight: 700;
+  padding: 12px 36px;
+  border: none;
+  border-radius: 32px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 6px 12px rgba(255, 224, 102, 0.5);
+}
+
+.form-submit:hover {
+  background-color: #ffd54f;
+  color: #3d2e16;
+}

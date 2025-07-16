@@ -1,0 +1,25 @@
+<div class="blog-detail-container">
+  <% if notice %>
+    <p class="notice-text"><%= notice %></p>
+  <% end %>
+
+  <div class="blog-card">
+    <h2>🏃‍♀️ 今日の運動メニュー</h2>
+    <div class="blog-content"><%= @blog.title %></div>
+  </div>
+
+  <div class="blog-card">
+    <h2>📝 内容</h2>
+    <div class="blog-content"><%= @blog.content %></div>
+  </div>
+
+  <div class="blog-button-area">
+    <% if @blog.diet.present? %>
+      <%= link_to '編集', edit_diet_blog_path(@blog.diet, @blog), class: "btn yellow" %>
+      <%= link_to '戻る', diet_blogs_path(@blog.diet), class: "btn white" %>
+    <% else %>
+      <%= link_to '編集', edit_blog_path(@blog), class: "btn yellow" %>
+      <%= link_to '戻る', blogs_path, class: "btn white" %>
+    <% end %>
+  </div>
+</div>

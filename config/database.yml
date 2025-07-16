@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql # sqlite3 を postgresql に変更
+  encoding: unicode # 追加
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV["postgresql://neondb_owner:npg_YdX5nV9mFIjA@ep-misty-shape-a1gut7q2-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"] %> # 追加
+# timeout: 5000 コメントアウトする
+development:
+  <<: *default
+  # database: storage/development.sqlite3 コメントアウトする
+test:
+  <<: *default
+  # database: storage/test.sqlite3 コメントアウトする
+production:
+  <<: *default
+  

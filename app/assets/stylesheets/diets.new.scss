@@ -1,0 +1,69 @@
+.post-form {
+  background: linear-gradient(135deg, #fff9e6, #ffe9e6);
+  padding: 30px;
+  border-radius: 25px;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 8px 18px rgba(255, 180, 180, 0.2);
+  font-family: 'Patrick Hand', cursive;
+  border: 3px dashed #ffb347;
+}
+
+.post-form .field {
+  margin-bottom: 18px;
+  font-size: 18px;
+  color: #444;
+}
+
+.post-form input[type="text"],
+.post-form textarea,
+.post-form input[type="file"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #ffc875;
+  border-radius: 12px;
+  background: #fffdf8;
+  font-size: 16px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
+  transition: 0.2s ease;
+}
+
+.post-form input:focus,
+.post-form textarea:focus {
+  border-color: #ff9e80;
+  background: #fff5eb;
+  outline: none;
+}
+
+.submit-btn {
+  background: linear-gradient(45deg, #ff6f91, #ff9671, #ffc75f);
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 111, 145, 0.3);
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(45deg, #ff4a75, #ffa07a, #ffe082);
+  box-shadow: 0 6px 12px rgba(255, 74, 117, 0.4);
+  transform: scale(1.03);
+}
+
+.back-link {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 15px;
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}

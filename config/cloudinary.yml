@@ -1,0 +1,12 @@
+development:
+  cloud_name: "dpsstmaqo"
+  api_key: "599377526446286"
+  api_secret: "0XIT5eK7K0M9wtOAhruZO9ah4i4"
+  enhance_image_tag: true
+  secure: true
+
+production:
+  cloud_name: "dpsstmaqo"
+  api_key: "599377526446286"
+  api_secret: "0XIT5eK7K0M9wtOAhruZO9ah4i4"
+  secure: true

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="page-title">My Daily Notes</h1>
+
+<div class="top-buttons">
+  <div class="home-button">
+    <%= link_to "🏠", user_path(current_user.id), class: "btn-icon" %>
+  </div>
+  <p>
+  <% if @diet.present? %>
+    <%= link_to '✍️', new_diet_blog_path(@diet), class: "btn-record" %>
+  <% else %>
+    <%= link_to '✍️', new_blog_path, class: "btn-record" %>
+  <% end %>
+</p>
+
+
+  <div class="action-links">
+    <%= link_to " Plan motion", new_perfume_path, class: "btn-link long" %>
+  </div>
+</div>
+
+
+
+<%= month_calendar events: @blogs, class: "month-calendar" do |date, blogs| %>
+  <div class="date-number"><%= date.day %></div>
+  <% blogs.each do |blog| %>
+    <div class="blog-item">
+      <% if blog.diet.present? %>
+        <%= link_to blog.title, diet_blog_path(blog.diet, blog), class: "blog-link" %>
+      <% else %>
+        <%= link_to blog.title, blog_path(blog), class: "blog-link" %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
+
+

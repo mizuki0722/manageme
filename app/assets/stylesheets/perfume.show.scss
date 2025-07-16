@@ -1,0 +1,165 @@
+/* 全体ベース */
+body {
+  font-family: 'Arial Rounded MT Bold', 'ヒラギノ角ゴ Pro W3', 'Yu Gothic', sans-serif;
+  background: #fffbe6; /* 柔らかいクリームイエロー */
+  color: #5a3b00; /* 暖かいダークブラウン */
+  margin: 20px;
+}
+
+/* 診断結果部分 */
+.intoro {
+  background: #fff3bf; /* 明るいレモンイエロー */
+  border-radius: 14px;
+  padding: 22px 30px;
+  box-shadow: 0 6px 12px rgba(255, 223, 93, 0.5);
+  text-align: center;
+  margin-bottom: 30px;
+  border: 2px solid #ffd43b;
+}
+
+.intoro h5 {
+  font-size: 2rem;
+  color: #f59f00; /* オレンジイエロー */
+  margin-bottom: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px 4px #ffec99;
+}
+
+.intoro p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #7a5d00;
+}
+
+/* メニューコンテナ */
+.perfume-container {
+  background: #fff8cc; /* 柔らかいパステルイエロー */
+  border-radius: 18px;
+  padding: 28px 35px;
+  box-shadow: 0 8px 20px rgba(255, 214, 0, 0.4);
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  font-size: 1.2rem;
+  color: #6b4b00;
+  line-height: 1.7;
+  border: 2px dashed #ffd700;
+}
+
+/* メニュータイトル */
+.perfume-container h6 {
+  font-size: 1.6rem;
+  color: #f5a623; /* オレンジ寄りイエロー */
+  margin-bottom: 14px;
+  font-weight: 900;
+  border-bottom: 3px solid #f5a623;
+  padding-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+/* メニュー内容 */
+.perfume-container p {
+  margin: 8px 0;
+  padding-left: 22px;
+  position: relative;
+  font-weight: 600;
+}
+
+/* メニュー項目にかわいいアイコン（⭐）をつける */
+.perfume-container p::before {
+  content: "⭐";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: #f5a623;
+  text-shadow: 0 0 3px #ffec99;
+}
+
+/* カレンダー記録リンク */
+.record-link {
+  display: inline-block;
+  background: #ffda44; /* 明るいイエロー */
+  color: #6b4b00;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  box-shadow: 0 5px 12px rgba(255, 218, 68, 0.7);
+  transition: background-color 0.3s ease, transform 0.25s ease;
+  border: 2px solid #f5a623;
+  user-select: none;
+}
+
+.record-link:hover {
+  background-color: #f5a623;
+  box-shadow: 0 8px 18px rgba(245, 166, 35, 0.9);
+  transform: scale(1.05);
+  color: #4a3200;
+  text-decoration: none;
+}
+.pop-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffe066 0%, #ffd43b 100%);
+  color: #6b4b00;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 14px 36px;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow:
+    0 4px 6px rgba(255, 212, 59, 0.6),
+    0 0 8px #ffd43b;
+  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.pop-button::before {
+  content: "✨";
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  animation: sparkle 2.5s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; transform: translateY(-50%) scale(1); }
+  50% { opacity: 0.5; transform: translateY(-55%) scale(1.2); }
+}
+
+.pop-button:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 6px 12px rgba(255, 218, 68, 0.8),
+    0 0 15px #ffec99;
+  color: #4a3200;
+  text-decoration: none;
+}
+.record-link-container {
+  text-align: center;
+  margin-top: 30px; /* 上にスペースを少し */
+}
+
+.record-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FFD600; /* 明るい黄色 */
+  color: #333;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+.record-link:hover {
+  background-color: #FFC107; /* ホバー時の黄色を少し変化 */
+  color: #000;
+}

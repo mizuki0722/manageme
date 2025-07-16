@@ -1,0 +1,183 @@
+.post-form {
+  max-width: 480px;
+  margin: 30px auto;
+  padding: 25px 20px;
+  background: #fffbea; /* 淡い黄色ベース */
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(255, 214, 0, 0.3);
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  color: #ffb300; /* 少し濃いめの黄色 */
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #ffecb3;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #555;
+  background-color: #fffdf5;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #ffca28;
+  background-color: #fffbea;
+  box-shadow: 0 0 6px #ffca28;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group.submit {
+  text-align: center;
+}
+
+.form-group.submit input[type="submit"] {
+  background-color: #ffd600;
+  color: #333;
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 36px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(255, 214, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.form-group.submit input[type="submit"]:hover {
+  background-color: #ffca28;
+  color: #000;
+}
+@import url('https://fonts.googleapis.com/css2?family=Rounded+M+1c&display=swap');
+
+.post-form {
+  max-width: 480px;
+  margin: 30px auto;
+  padding: 25px 20px;
+  background: #fffbea;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(255, 214, 0, 0.3);
+  font-family: 'Rounded M+ 1c', 'Noto Sans JP', sans-serif;
+  color: #6b4f00;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 700;
+  color: #ffb300;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 2px #ffe066;
+  letter-spacing: 0.05em;
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2.5px solid #ffecb3;
+  border-radius: 16px;
+  font-size: 1rem;
+  color: #555;
+  background-color: #fffdf5;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Rounded M+ 1c', 'Noto Sans JP', sans-serif;
+  box-shadow: inset 0 2px 4px rgba(255, 236, 179, 0.4);
+}
+
+.form-group input[type="text"]::placeholder,
+.form-group textarea::placeholder {
+  color: #f2d680;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #ffca28;
+  background-color: #fffbea;
+  box-shadow: 0 0 8px 2px #ffca28aa;
+}
+
+.form-group textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.form-group.submit {
+  text-align: center;
+}
+
+.form-group.submit input[type="submit"] {
+  background-color: #ffd600;
+  color: #4a2e00;
+  font-weight: 900;
+  border: none;
+  border-radius: 32px;
+  padding: 14px 44px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(255, 214, 0, 0.6);
+  text-shadow: 0 1px 1px #fff7a3;
+  letter-spacing: 0.1em;
+  transition: background-color 0.3s ease;
+  font-family: 'Rounded M+ 1c', 'Noto Sans JP', sans-serif;
+}
+
+.form-group.submit input[type="submit"]:hover {
+  background-color: #ffca28;
+  color: #3b2200;
+  box-shadow: 0 8px 18px rgba(255, 202, 40, 0.8);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.form-group.submit input[type="submit"] {
+  background-color: #fff; /* 白 */
+  color: #fbc02d;         /* イエローゴールド */
+  font-weight: 900;
+  border: 3px solid #fbc02d; /* 黄色ボーダー */
+  border-radius: 32px;
+  padding: 16px 48px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(251, 192, 45, 0.4); /* 黄色のふんわり影 */
+  text-shadow: none;
+  letter-spacing: 0.12em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Rounded M+ 1c', 'Noto Sans JP', sans-serif;
+}
+
+.form-group.submit input[type="submit"]:hover {
+  background-color: #fbc02d; /* 濃いめの黄色 */
+  color: #fff;               /* 白文字 */
+  box-shadow: 0 8px 20px rgba(251, 192, 45, 0.9);
+}
